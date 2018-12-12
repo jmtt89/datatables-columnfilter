@@ -352,10 +352,10 @@
 
   // Define as an AMD module if possible
   if (typeof define === 'function' && define.amd) {
-    define(['jquery', 'datatables'], factory);
+    define(['jquery', 'datatables.net'], factory);
   } else if (typeof exports === 'object') {
     // Node/CommonJS
-    factory(require('jquery'), require('datatables'));
+    factory(require('jquery'), require('datatables.net'));
   } else if (jQuery && !jQuery.fn.dataTable.ColumnFilter) {
     // Otherwise simply initialise as normal, stopping multiple evaluation
     factory(jQuery, jQuery.fn.dataTable);
